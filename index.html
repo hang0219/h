@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>绿色边框图片带循环烟花和附着物</title>
+    <style>.bio-content {
+  border: 2px solid #333;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+}
+      .bio-title {
+        color: #333;
+        font-size: 28px;
+        text-decoration: underline;
+      }
+      /* 图片容器 */
+      .container {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+
+      /* 图片 */
+      img {
+        display: block;
+        width: 55%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; /* 确保图片在最上层 */
+      }
+
+      /* 边框 */
+      .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 10px solid #0f0; /* 设置边框颜色为绿色 */
+        box-sizing: border-box;
+        animation: fireworks 10s infinite; /* 循环烟花效果 */
+        z-index: -1; /* 将边框放在图片下方 */
+      }
+
+      /* 烟花效果 */
+      @keyframes fireworks {
+        0% {
+          border-width: 10px;
+        }
+        50% {
+          border-width: 20px;
+        }
+        100% {
+          border-width: 10px;
+        }
+      }
+
+      /* 附着物 */
+      .attachment {
+        position: absolute;
+        top: 10px; /* 调整附着物在上方的位置 */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 24px;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="微信图片_20240220150715.jpg" alt="Placeholder Image" />
+      <div class="attachment">饶仕发</div>
+    </div>
+  </body>
+
+<h2 class="bio-title">个人简介</h2>
+<div class="bio-content">
+    <p>专业钻孔,有20年的钻孔经验</p>
+    <p>杭州</p>
+    <p>联系电话
+        13606530150
+    </p>
+  </div>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>微型烟花效果</title>
+<style>
+  /* 烟花容器 */
+  .firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff0; /* 设置烟花颜色为黄色 */
+    border-radius: 50%;
+    animation: explode 2s ease-out infinite; /* 微弱爆炸效果 */
+  }
+  
+  /* 烟花动画 */
+  @keyframes explode {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(5);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+<!-- 微型烟花效果 -->
+<div class="firework" style="top: 100px; left: 100px;"></div>
+<div class="firework" style="top: 200px; left: 200px;"></div>
+<div class="firework" style="top: 300px; left: 300px;"></div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>飘雪效果</title>
+<style>
+  /* 页面背景 */
+  body {
+    background-color: #000;
+    overflow: hidden;
+  }
+  
+  /* 雪花容器 */
+  .snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff; /* 设置雪花颜色为白色 */
+    border-radius: 50%;
+    animation: snowfall 5s linear infinite; /* 飘雪动画 */
+  }
+  
+  /* 雪花动画 */
+  @keyframes snowfall {
+    0% {
+      transform: translateY(-10px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+    }
+  }
+</style>
+</head>
+<body>
+<!-- 飘雪效果 -->
+<div class="snowflake" style="top: -10px; left: 50%;"></div>
+<div class="snowflake" style="top: -10px; left: 25%;"></div>
+<div class="snowflake" style="top: -10px; left: 75%;"></div>
+<!-- 可以添加更多的雪花 -->
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>飘雪效果</title>
+<style>
+  /* 页面背景 */
+  body {
+    background-color: #fff; /* 将背景颜色改为白色 */
+    overflow: hidden;
+  }
+  
+  /* 雪花容器 */
+  .snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000; /* 设置雪花颜色为黑色 */
+    border-radius: 50%;
+    animation: snowfall 5s linear infinite; /* 飘雪动画 */
+  }
+  
+  /* 雪花动画 */
+  @keyframes snowfall {
+    0% {
+      transform: translateY(-10px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+    }
+  }
+</style>
+</head>
+<body>
+<!-- 飘雪效果 -->
+<div class="snowflake" style="top: -10px; left: 50%;"></div>
+<div class="snowflake" style="top: -10px; left: 25%;"></div>
+<div class="snowflake" style="top: -10px; left: 75%;"></div>
+<!-- 可以添加更多的雪花 -->
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>不规则飘雪效果</title>
+<style>
+  /* 页面背景 */
+  body {
+    background-color: #fff; /* 将背景颜色改为白色 */
+    overflow: hidden;
+  }
+  
+  /* 雪花容器 */
+  .snowflake {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    animation: snowfall 5s linear infinite; /* 飘雪动画 */
+  }
+  
+  /* 雪花动画 */
+  @keyframes snowfall {
+    0% {
+      transform: translateY(-10px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+    }
+  }
+  
+  /* 雪花形状 */
+  .snowflake::before,
+  .snowflake::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff; /* 设置雪花颜色为白色 */
+    border-radius: 50%;
+    animation: snowfall 5s linear infinite; /* 飘雪动画 */
+  }
+  
+  .snowflake::before {
+    top: -5px;
+    left: 50%;
+  }
+  
+  .snowflake::after {
+    top: -5px;
+    left: -5px;
+  }
+</style>
+</head>
+<body>
+<!-- 不规则飘雪效果 -->
+<div class="snowflake" style="top: -10px; left: 50%;"></div>
+<div class="snowflake" style="top: -10px; left: 25%;"></div>
+<div class="snowflake" style="top: -10px; left: 75%;"></div>
+<!-- 可以添加更多的雪花 -->
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>页面打开动画</title>
+<style>
+  /* 页面背景 */
+  body {
+    background-color: #fff; /* 将背景颜色改为白色 */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* 打孔机容器 */
+  .punch {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #f00; /* 设置打孔机颜色为红色 */
+    border-radius: 50%;
+    overflow: hidden;
+    animation: openPunch 2s ease-out forwards; /* 打孔机打开动画 */
+  }
+  
+  /* 打孔机打开动画 */
+  @keyframes openPunch {
+    0% {
+      border-radius: 50%;
+    }
+    100% {
+      border-radius: 0%;
+    }
+  }
+  
+  /* 打孔机孔洞 */
+  .hole {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: #fff; /* 孔洞颜色为白色 */
+    border-radius: 50%;
+  }
+</style>
+<script>
+  // 在动画结束时移除打孔机元素
+  document.addEventListener('DOMContentLoaded', function() {
+    var punch = document.querySelector('.punch');
+    punch.addEventListener('animationend', function() {
+      punch.remove();
+    });
+  });
+</script>
+</head>
+<body>
+<!-- 页面打开动画 - 打孔机 -->
+<div class="punch">
+  <div class="hole"></div>
+</div>
+</body>
+</html>
+</html>
